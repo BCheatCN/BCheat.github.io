@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCheat网盘</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: #f5f7fa url('https://cccimg.com/view.php/420dcc0cda189d9fe1cce0e299a6b82d.jpg') no-repeat center / cover;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .header p {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        .btn {
+            display: block;
+            width: 200px;
+            padding: 12px 0;
+            margin: 15px 0;
+            background-color: #4a6cf7;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #3a5ce7;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(74, 108, 247, 0.3);
+        }
+        
+        @media (max-width: 576px) {
+            .header h1 {
+                font-size: 20px;
+            }
+            .header p, .btn {
+                font-size: 14px;
+            }
+            .btn {
+                width: 160px;
+                padding: 10px 0;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1>BCheat网盘</h1>
+        <p>点击选择下载的版本</p>
+    </div>
+
+    <a href="http://wpan.cdndns.site/down/BCheatGL" class="btn" id="btnGlobal">点击全球服</a>
+    <a href="http://wpan.cdndns.site/down/BCheatKR" class="btn" id="btnJPKR">点击日韩服</a>
+    <a href="http://wpan.cdndns.site/down/BCheatTW" class="btn" id="btnTW">点击台湾服</a>
+    <a href="http://wpan.cdndns.site/down/BCheatVN" class="btn" id="btnVN">点击越南服</a>
+
+    <script>
+        // 统一处理按钮点击逻辑
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // 移除旋转图标和提示文字，直接跳转
+                window.location.href = this.getAttribute('href');
+            });
+        });
+    </script>
+</body>
+</html>
